@@ -38,38 +38,44 @@ class NewVisitorTest(unittest.TestCase):
         # there is a page title defined by <title></title> on the home page
         # check it
 
-        self.assertIn('The Title of my Web Site',self.browser.title)
+        self.assertIn("Islamic Women's Battle for Self Actualization",self.browser.title)
 
         # You will have an image for your home page I am assuming.
         # Put the name of your image here in place of homebrew.png
         # In general this is how we check for images on a page.
 
         m=self.browser.find_element_by_tag_name('img')
-        self.assertIn('homebrew.png',m.get_attribute('src'))
+        self.assertIn('hijabb9.jpg',m.get_attribute('src'))
 
         # We check here for the title of your home page.
         # uncomment the next lines and change the text when you set your title.
         # put your title in place of "The Title of My Home Page"
 
         h=self.browser.find_element_by_css_selector('h1')
-        self.assertIn("The Title of My Home Page",h.text)
+        self.assertIn("Islamic Women's Battle for Self Actualization",h.text)
 
         # There is an area specified around the computer keyboard.
         # the 'id' of this area is 'keyboard'
 
         # this is how we find that area.
-        a=self.browser.find_element_by_id('keyboard')
+        a=self.browser.find_element_by_id('womenfashion1')
 
         # this is how we click on it.
         a.click()
 
         # after clicking on it, we should see the next page.
-        e=self.browser.find_element_by_css_selector("h1")
-        self.assertIn('Keyboards',e.text)
+        # e=self.browser.find_element_by_css_selector("h1")
+        # self.assertIn('',e.text)
 
         # The page should have a picture of a teletype machine. 
-        m=self.browser.find_element_by_tag_name('img')
-        self.assertIn('teletype.jpg',m.get_attribute('src'))
+        # m=self.browser.find_element_by_tag_name('img')
+        # self.assertIn('teletype.jpg',m.get_attribute('src'))
+
+        # the user goes back to the home page
+        # self.browser.back()
+
+        # the user sees at the bottom of the page a link ot credits
+        # l=self.broswer.find_element_by_link_text('Credits')
     
 
 if __name__=="__main__":

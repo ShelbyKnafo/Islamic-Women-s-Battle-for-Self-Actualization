@@ -1,27 +1,51 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>The Title of my Web Site</title>
-  </head>
+<head>
+	<meta charset="utf-8" />
+	<title>Islamic Women's Battle for Self Actualization</title>
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1" />
+	<style>
+	body {
+		font-family: Helvetica, Arial, sans-serif;
+	}
+	h1 {
+		font-size: 20px;
+	}
+	div {
+		width: 100%;
+	}
+	img[usemap] {
+		border: none;
+		height: auto;
+		max-width: 100%;
+		width: auto;
+	}
+	</style>
+</head>
+<body>
+<h1>Islamic Women's Battle for Self Actualization</h1>
+<div>
+	  <img src="/static/hijabb9.jpg" width="600" height="450" usemap="#downmap" alt="" />
+      <map name=downmap> 
+     
+        <area shape="poly" coords="237,374,262,371,283,366,304,363,316,356,337,346,355,333,371,320,386,311,392,303,233,376,245,387,248,400,249,412,249,420,243,439,247,441,259,440,307,438,326,439,347,442,370,443,400,444,434,442,457,440,484,440,506,439,533,437,549,435,555,433,554,413,545,390,514,345,505,343,497,339,480,333,447,324,426,317,404,312,393,308" href="../../gamma/modesty/hijab9.html">
+        <area shape="poly" coords="256,102,233,143,228,161,230,192,238,242,239,263,237,279,194,272,186,272,163,270,146,267,125,264,98,259,70,255,66,237,68,224,69,208,73,188,77,174,83,154,88,139,95,125,103,98,122,87,129,76,142,65,157,55,169,43,191,30,201,27,231,15,244,9,267,3" href="#">
+        <area id="womenfashion1" shape="poly" coords="270,7,278,8,312,8,333,7,347,7,335,20,329,25,302,51,292,60,276,74,260,85,250,98" href="womenfashion1.html">
+      </map>
+</div>
 
-  <body>
-    <h1>The Title of My Home Page</h1>
-
-<img src="/static/homebrew.png" width="800" height="542" border="0" usemap="#map" />
-
-<map name="map">
-<!-- #$-:Image map file created by GIMP Image Map plug-in -->
-<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
-<!-- #$-:Please do not edit lines starting with "#$" -->
-<!-- #$VERSION:2.3 -->
-<!-- #$AUTHOR:Michael Toth -->
-<area id="keyboard" shape="rect" coords="356,371,561,538"  href="keyboards.html" />
-</map>
-    <hr>
-    <address><a href="mailto:michaeltoth@virtualpianist.com">Michael Toth</a></address>
-<!-- Created: Fri Sep  9 04:41:23 EDT 2016 -->
-<!-- hhmts start -->
-Last modified: Wed Sep 14 18:49:46 EDT 2016
-<!-- hhmts end -->
-  </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jQuery-rwdImageMaps-master/jquery.rwdImageMaps.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+	
+	$('area').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+	});
+});
+</script>
+</body>
 </html>
